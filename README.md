@@ -1,2 +1,1 @@
-# jennifer-O-peterson
-
+# Jennifer O. Peterson
