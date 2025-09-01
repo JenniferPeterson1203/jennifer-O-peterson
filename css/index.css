@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(135deg, goldenrod, peachpuff);
+  color: rgba(59, 4, 4, 0.9);
+  font-family: sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700; /* bold look for headings */
+}
+
+section {
+      margin: 40px auto;
+  padding: 20px;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+h1, #About, #Experience, #Connect {
+    text-align: center;
+}
+
+h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: darkred;
+    font-style: italic;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2{
+    font-size: 28px;
+  font-weight: 600;
+  border-bottom: 3px solid darkred;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+img {
+  width: 200px;
+  border-radius: 50%; /* makes it a circle */
+  display: block;
+  margin: 0 auto; /* this centers the image */
+}
+
+#Experience li {
+  background:rgb(250, 245, 245);
+  padding: 10px;
+  margin: 50px 0;
+  border-radius: 20px;
+  transition: transform 0.2s;
+  list-style: none; /* this removes the bullet points */
+}
+
+
+#Experience li:hover {
+  transform: scale(1.05);
+  background: #8a3110; /* light highlight */
+}
+
+#Connect a {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 12px;
+  background: maroon;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+#Connect a i {
+  margin-right: 8px; /* space between icon and text */
+  font-size: 20px;   /* size of icon */
+}
+
+#Connect a:hover {
+  background: darkred; /* this makes the color change on hover */
+  transform: translateY(-3px);
+}
