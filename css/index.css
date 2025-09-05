@@ -51,19 +51,48 @@ img {
   margin: 0 auto; /* this centers the image */
 }
 
-#Experience li {
-  background:rgb(250, 245, 245);
-  padding: 10px;
-  margin: 50px 0;
-  border-radius: 20px;
-  transition: transform 0.2s;
-  list-style: none; /* this removes the bullet points */
+
+  #Experience ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+#Experience li {
+  background: rgb(250, 245, 245);
+  padding: 20px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.experience-header .title {
+  font-size: 18px;
+  color: darkred;
+}
+
+.experience-header .date {
+  font-style: italic;
+  color: #555;
+}
+
+#Experience li p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
 
 
 #Experience li:hover {
   transform: scale(1.05);
-  background: #8a3110; /* light highlight */
+  background: #8a3110; 
 }
 
 #Connect a {
@@ -79,11 +108,42 @@ img {
 }
 
 #Connect a i {
-  margin-right: 8px; /* space between icon and text */
-  font-size: 20px;   /* size of icon */
+  margin-right: 8px; /* this puts space between icon and text */
+  font-size: 20px;   /* this changes the size of the icons */
 }
 
 #Connect a:hover {
   background: darkred; /* this makes the color change on hover */
   transform: translateY(-3px);
+}
+
+nav { 
+  position: sticky;  /* this makes nav stay on top */
+  top: 0;
+  background: maroon;
+  padding: 15px 0;
+  z-index: 1000; /* not sure if i need this but i think it makes the nav stay above sections */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: goldenrod;
 }
