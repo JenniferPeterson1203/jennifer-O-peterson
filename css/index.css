@@ -228,3 +228,26 @@ nav ul li a:hover {
     }
 }
 
+/* Skills Section */
+#Skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+#Skills li {
+  background-color: maroon;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+#Skills li:hover {
+  transform: scale(1.1);
+  background: rgb(191, 38, 38);
+}
