@@ -104,3 +104,63 @@ messageForm.addEventListener("submit", function (event) {
     // clear the form
     event.target.reset();
 });
+
+
+
+// Fetch Call to My GitHub Repositories
+
+// I’m using fetch to grab my GitHub repositories from the API
+fetch("https://api.github.com/users/JenniferPeterson1203/repos")
+  .then(response => {
+    // The API sends back a response, but I need to turn it into JSON so I can work with it
+    return response.json();
+  })
+  .then(repositories => {
+    //UNCOMMENT IF I WANT TO PUT IN BY DATE OF CREATION INSTEAD OF ALPHABETICAL ORDER
+     // Sort repositories by creation date (newest first)
+    // repositories.sort((a, b) => new Date(b.created_at) - new Date(a.created_at)); 
+
+
+    // Now I have my repositories in JSON format (basically an array of objects)
+    // I want to check it in the console to see what it looks like
+    console.log(repositories);
+
+    // I’m selecting the "Projects" section from my HTML
+    const projectSection = document.getElementById("Projects");
+    // Inside that section, I’m grabbing the <ul> where my repos will go
+    const projectList = projectSection.querySelector("ul");
+
+    // I want to loop through all of my repositories
+    for (let i = 0; i < repositories.length; i++) {
+      // This is the current repository in the loop
+      const repo = repositories[i];
+
+      // I’m creating a new list item <li> for the repo
+      const project = document.createElement("li");
+
+      // I’m making an <a> tag so users can click and go to the repo
+      const link = document.createElement("a");
+      link.href = repo.html_url; // this is the link to the GitHub repo page
+      link.innerText = repo.name; // this is the name of the repo
+      link.target = "_blank";//this opens in a new tab (so my portfolio stays open)
+
+      // Add the link inside the list item
+      project.appendChild(link);
+
+      // Finally, I’m adding this new <li> to the <ul> in my Projects section
+      projectList.appendChild(project);
+    }
+  })
+  .catch(error => {
+    // If something goes wrong (like the API doesn’t load), I’ll see the error here
+    console.error("Error fetching repositories:", error);
+
+    // I’m grabbing the Projects section again
+    const projectSection = document.getElementById("Projects");
+    const projectList = projectSection.querySelector("ul");
+
+    // Instead of just failing silently, I’ll show a message on my page
+    const errorItem = document.createElement("li");
+    errorItem.innerText = "⚠️ Unable to load projects at this time.";
+    projectList.appendChild(errorItem);
+  });
