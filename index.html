@@ -20,6 +20,7 @@
 </head>
 <body>
     <!-- Should i put the nav inside of a header tag or does that not matter much? -->
+     <header>
         <nav>
         <ul>
             <li><a href="#About">About</a></li>
@@ -27,8 +28,10 @@
             <li><a href="#Skills">Skills</a></li>
             <li><a href="#Projects">Projects</a></li>
             <li><a href="#Connect">Connect</a></li>
+              <li><a href="#message">Leave a Message</a></li>
         </ul>
     </nav>
+  </header>
 
     <!-- My name -->
     <h1>Jennifer Peterson</h1>
@@ -98,6 +101,32 @@
             <i class="fab fa-github"></i>
             Github
         </a>
+    </section>
+
+    <!-- Leave a Message Section -->
+    <section id="message">
+      <h2>Leave a Message</h2>
+      <form name="leave_message">
+         <label for="usersName">Name</label>
+        <br>
+        <input type="text" name="usersName" required>
+       
+          <label for="usersEmail">Email</label>
+        <br>
+        <input type="email" name="usersEmail" id="" required>
+        <br>
+          <label for="usersMessage">Message</label>
+        <br>
+        <textarea name="usersMessage" id="" required></textarea>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    
+    <!-- Messages List Section -->
+    <section id="messages">
+      <h2>Messages</h2>
+      <ul></ul>
     </section>
     <script src="js/index.js"></script>
 </body>
