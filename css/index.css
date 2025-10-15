@@ -256,3 +256,61 @@ nav ul li a:hover {
   display: none;
    /* this makes it hidden until messages are added */
 }
+
+
+/* Projects Section */
+#Projects ul {
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+
+  display: flex;          /* flexbox layout */
+  flex-wrap: wrap;        /* wrap items onto new lines */
+  gap: 20px;              /* space between cards */
+  justify-content: center;
+}
+
+#Projects li {
+  background: #fff;
+  border: 2px solid maroon;
+  border-radius: 12px;
+  padding: 0; 
+  min-width: 150px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Style the clickable link inside the card */
+#Projects li a {
+  display: block; /* make the whole card clickable */
+  padding: 15px 20px;
+  font-weight: bold;
+  color: maroon;
+  text-decoration: none;    
+  border-radius: 12px;      
+  transition: all 0.3s ease;
+}
+
+/* Hover affect on the projects section */
+#Projects li:hover,
+#Projects li a:hover {
+  background: maroon;
+  color: white;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Make projects stack up on smaller screens */
+@media (max-width: 767px) {
+  #Projects ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #Projects li {
+    width: 80%;
+    max-width: 300px;
+  }
+}
