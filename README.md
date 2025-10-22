@@ -66,17 +66,18 @@ This portfolio is a simple and responsive website featuring multiple sections:
 
 ## 📁 Project Structure
 
-├── index.html
-├── css/
-│ └── index.css
-├── js/
-│ └── index.js
-├── assets/
-│ └── Jennifer-O-Peterson.jpeg
-└── README.md
+Jennifer-O-Peterson/
 
-
+    ├─ index.html
+    ├─ css/
+    │ └─ index.css
+    ├─ js/
+    │ ├─ index.js 
+    ├─ assets/
+    │ └─ Jennifer-O-Peterson.jpeg
+    └─ README.md
 ---
+
 
 ## 🚀 How to Run the Project Locally
 
